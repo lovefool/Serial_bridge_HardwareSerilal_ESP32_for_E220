@@ -2,7 +2,6 @@
 Serial bridge for E220-900T22S-JP Config read/write 
 
 E220 is connected via HardwareSerial2 (port name: Serial2)
-
 PLatform : ESP-WROOM-32D
 
 For binary data transfer, use RS232 TEST tools
