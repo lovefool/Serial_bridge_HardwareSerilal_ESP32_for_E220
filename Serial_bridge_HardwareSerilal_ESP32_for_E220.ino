@@ -1,9 +1,9 @@
 /*
-Serial bridge for E220-900T22S-JP Config read 
+Serial bridge for E220-900T22S-JP Config read/write 
 
-E220 is connected via hardware serial (port name: Serial2)
+E220 is connected via HardwareSerial2 (port name: Serial2)
 
-PLatform is ESP-WROOM-32D
+PLatform : ESP-WROOM-32D
 
 For binary data transfer, use RS232 TEST tools
 http://nonsoft.la.coocan.jp/Download/Rs232cTool/index.html
@@ -23,9 +23,11 @@ http://nonsoft.la.coocan.jp/Download/Rs232cTool/index.html
 送-> <c1><00><09>
 ->受 <c1><00><09><00><00><70><01><00><c5><00><00><10>
 
+Rev 0.1 2024.06.22  Initial
 Rev 0.2 2024.06.25  Change M0/M1 pins
 Rev 0.3 2024.06.26  Cleanup codes, add config commands
-Jay Teramoto 2024.6.21 (Complete)
+
+Jay Teramoto (Complete)
 */
 
 #define M0pin   26      // New assign
