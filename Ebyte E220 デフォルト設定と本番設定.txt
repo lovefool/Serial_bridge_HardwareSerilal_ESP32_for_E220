@@ -1,0 +1,27 @@
+Ebyte E220 現状の設定
+
+接続 COM10
+送-> <c1><00><09>
+->受 <c1><00><09><00><03><62><02><46><83><00><00><20>
+
+
+ADDH=0
+ADDL=3
+REG0=62		UART 9600bps(001), Parity=8N1(00), AirDataRate=2.4K(010)
+REG1=02		Sub-packet=200byte(00), RSSI ambient=Disable(0),reserve(000),13dBm(10) 
+REG2=46H 	Channel=70ch(46H)
+REG3=83H	RSSI byte=enable(1), Tx mode=Transpearent(0), reserve(0), LBTenable(0), reserve(0), WORcyle(011)
+CRYPT_H=0H
+CTYPT_L=0H
+
+******* 以下の設定を本番で採用 **********
+Sample Rev3の設定(Fixed, RSSI, addh=0, addl=0,chan=0)
+
+確認
+<c1><00><09>
+
+設定
+<c0><00><08><00><00><70><01><00><C5><00><00>
+
+メッセージ送信テスト。受信側にはRSSIが1Byte付与される。
+<00><00><00>Hello
