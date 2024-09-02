@@ -25,15 +25,16 @@ http://nonsoft.la.coocan.jp/Download/Rs232cTool/index.html
 Rev 0.1 2024.06.22  Initial
 Rev 0.2 2024.06.25  Change M0/M1 pins
 Rev 0.3 2024.06.26  Cleanup codes, add config commands
+Rev 0.4 2024.09.02  Change comments, test on ESP32_WROOM_32D on Flexy adaptor
 
 Jay Teramoto (Complete)
 */
 
-#define M0pin   26      // New assign
-#define M1pin   27      // New assign
-#define AUXpin  14      // New assign (not use)
-#define Tx      17      // GPIO17 U2TDX (not use)
-#define Rx      16      // GPIO16 U2RDX (not use)
+#define M0pin   26      // GPIO26
+#define M1pin   27      // GPIO27
+#define AUXpin  14      // GPIO14
+#define Tx      17      // GPIO17 U2TDX 
+#define Rx      16      // GPIO16 U2RDX 
 
 void setup() {
 
